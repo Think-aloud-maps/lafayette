@@ -212,8 +212,8 @@
             { title: "Current Time", info: "8:41 AM." },
             { title: "Address of Origin", info: "1104 E 3rd St, Fowler, IN 47944." },
             { title: "Address of Destination", info: "3030 W 246th St, Sheridan, IN 46069." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "76.15 miles." },
+            { title: "Estimated Time to Destination", info: "91 minutes." },
             { title: "State of Charge of Battery", info: "49% charge." },
             { title: "Range of Current Battery", info: "147 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "110 miles." },
@@ -231,10 +231,10 @@
                 name: 'West Lafayette City Hall',
 
                 location: '222 N Chauncey Ave, West Lafayette, IN 47906, USA',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '27.87',
+                originTime: '36',
+                destDistance: '50.89',
+                destTime: '63',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -270,10 +270,10 @@
                 name: 'Nickel Plate Flats',
 
                 location: '55 N Jackson St, Frankfort, IN 46041, USA',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '55.41',
+                originTime: '65',
+                destDistance: '24.06',
+                destTime: '34',
 
                 
                 waitTime: [
@@ -936,8 +936,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
